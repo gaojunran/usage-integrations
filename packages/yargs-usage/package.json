@@ -28,7 +28,10 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@usage-spec/core": "*"
+    "@usage-spec/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "yargs": "^17.0.0"
   },
   "devDependencies": {
     "@types/yargs": "^17.0.35",

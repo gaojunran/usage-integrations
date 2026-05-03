@@ -20,7 +20,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@usage-spec/core": "*",
+    "@usage-spec/core": "^1.0.0",
     "commander": "^14.0.3"
   }
 }
