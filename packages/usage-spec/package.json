@@ -1,0 +1,25 @@
+{
+  "name": "@usage-spec/core",
+  "version": "1.0.0",
+  "description": "Core types and rendering for usage spec",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["usage", "cli", "kdl", "spec"],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@bgotink/kdl": "^0.4.0"
+  }
+}

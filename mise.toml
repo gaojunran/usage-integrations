@@ -1,0 +1,2 @@
+[tasks.test]
+run = "npx vitest run"  # FIXME: should use aube

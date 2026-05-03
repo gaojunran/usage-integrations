@@ -1,0 +1,25 @@
+{
+  "name": "@usage-spec/oclif",
+  "version": "1.0.0",
+  "description": "Generates usage spec for CLIs written with oclif",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["oclif", "usage", "cli", "kdl", "shell-completion"],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@usage-spec/core": "*"
+  }
+}

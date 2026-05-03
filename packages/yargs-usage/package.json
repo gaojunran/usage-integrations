@@ -1,0 +1,37 @@
+{
+  "name": "@usage-spec/yargs",
+  "version": "1.0.0",
+  "description": "Generates usage spec for CLIs written with yargs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "yargs",
+    "usage",
+    "cli",
+    "kdl",
+    "shell-completion"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@usage-spec/core": "*"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.35",
+    "yargs": "^17.7.2"
+  }
+}
