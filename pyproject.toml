@@ -1,0 +1,22 @@
+[project]
+name = "usage-integrations-workspace"
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "usage-spec",
+    "usage-spec-argparse",
+    "usage-spec-click",
+    "usage-spec-typer",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "click>=8.0", "typer>=0.9"]
+
+[tool.uv.workspace]
+members = ["packages/usage-spec-python", "packages/argparse-usage", "packages/click-usage", "packages/typer-usage"]
+
+[tool.uv.sources]
+usage-spec = { workspace = true }
+usage-spec-argparse = { workspace = true }
+usage-spec-click = { workspace = true }
+usage-spec-typer = { workspace = true }
