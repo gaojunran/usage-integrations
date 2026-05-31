@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dev.usage-spec</groupId>
+  <artifactId>usage-spec-kotlin</artifactId>
+  <version>1.1.0</version>
+  <name>usage-spec-kotlin</name>
+  <description>KDL/JSON rendering and validation for CLI usage specifications</description>
+  <url>https://github.com/gaojunran/usage-integrations</url>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>gaojunran</id>
+      <name>Junran Gao</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/gaojunran/usage-integrations.git</connection>
+    <developerConnection>scm:git:ssh://github.com:gaojunran/usage-integrations.git</developerConnection>
+    <url>https://github.com/gaojunran/usage-integrations</url>
+  </scm>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clikt_usage.CliktUsageTest" tests="52" skipped="0" failures="0" errors="0" timestamp="2026-05-31T12:49:25.352Z" hostname="1deMacBook-Air.local" time="0.172">
+  <properties/>
+  <testcase name="generates spec for a basic CLI with options" classname="clikt_usage.CliktUsageTest" time="0.02"/>
+  <testcase name="includes generated comment header" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="uses custom bin name when provided" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders short-only flags" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="renders long-only flags" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders subcommands recursively" classname="clikt_usage.CliktUsageTest" time="0.002"/>
+  <testcase name="does not mark root-level flags as global" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="marks mandatory options as required" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="hides commands and options" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="converts required arguments" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="converts optional arguments" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="converts variadic arguments" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="converts mixed required and optional args" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="renders flag with optional argument" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="renders choices for option arguments" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="renders choices for positional arguments" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders default value for option" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders default value for argument" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="skips false default for boolean flags" classname="clikt_usage.CliktUsageTest" time="0.005"/>
+  <testcase name="preserves string zero as default" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="preserves true default for boolean flags" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="does not render arg for boolean flags" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="does not render the help subcommand" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="does not render --help flag" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="sets subcommand_required for non-runnable commands with subcommands" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="does not set subcommand_required for runnable commands" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="does not set subcommand_required when command has positional args" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders command aliases" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders single alias" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="renders about for root command" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="uses about field when present" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders help for subcommand" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="renders negate for --no- options" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="negated boolean options do not have arg" classname="clikt_usage.CliktUsageTest" time="0.006"/>
+  <testcase name="renders env for options with env vars" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles newlines in command help" classname="clikt_usage.CliktUsageTest" time="0.004"/>
+  <testcase name="handles special chars in flag help" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="generates valid KDL for basic command" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="generates valid KDL for nested commands" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="generateKDL is an alias for generate" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="generates JSON output with correct structure" classname="clikt_usage.CliktUsageTest" time="0.015"/>
+  <testcase name="includes choices in JSON output" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="includes flag details in JSON" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles custom bin name in JSON" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="returns a spec with correct structure" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="includes arguments in spec" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles empty command with no options or args" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles command with only subcommands" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles option with required" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles variadic option argument" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <testcase name="skips version field when not set" classname="clikt_usage.CliktUsageTest" time="0.0"/>
+  <testcase name="handles multiple flags on subcommand" classname="clikt_usage.CliktUsageTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

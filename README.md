@@ -22,6 +22,17 @@ Monorepo for generating [usage spec](https://usage.jdx.dev) from CLI framework m
 | [`usage-spec-click`](packages/click-usage/) | `usage-spec-click` | Click integration |
 | [`usage-spec-typer`](packages/typer-usage/) | `usage-spec-typer` | Typer integration (built on top of `usage-spec-click`) |
 
+### Kotlin / JVM
+
+Published to [GitHub Packages](https://github.com/gaojunran/usage-integrations/packages).
+
+| Package | Maven coordinates | Description |
+|---|---|---|
+| [`usage-spec-kotlin`](packages/usage-spec-kotlin/) | `dev.usage-spec:usage-spec-kotlin` | Core Spec types, KDL/JSON rendering via `kdl4j` and `kotlinx-serialization` |
+| [`jcommander-usage`](packages/jcommander-usage/) | `dev.usage-spec:jcommander-usage` | JCommander integration |
+| [`picocli-usage`](packages/picocli-usage/) | `dev.usage-spec:picocli-usage` | picocli integration |
+| [`clikt-usage`](packages/clikt-usage/) | `dev.usage-spec:clikt-usage` | Clikt integration |
+
 ## Usage
 
 ### JavaScript / TypeScript
@@ -75,6 +86,44 @@ def cli():
 print(generate(cli, bin_name="mycli"))
 ```
 
+### Kotlin / JVM
+
+Add the GitHub Packages repository and dependency:
+
+```kotlin
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/gaojunran/usage-integrations")
+        credentials {
+            username = findProperty("githubUsername") as String? ?: System.getenv("GITHUB_USERNAME")
+            password = findProperty("githubToken") as String? ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation("dev.usage-spec:clikt-usage:1.1.0")
+}
+```
+
+Each adapter provides the same API surface:
+
+```kotlin
+import clikt_usage.generate
+import clikt_usage.generateJSON
+import clikt_usage.convertRoot
+
+// Generate KDL spec
+val kdl = generate(command)
+
+// Generate JSON spec
+val json = generateJSON(command)
+
+// Get Spec object for custom processing
+val spec = convertRoot(command)
+```
+
 Pipe KDL output to the `usage` CLI for completions, docs, and man pages:
 
 ```sh
@@ -96,6 +145,13 @@ aube run test -r      # Run all tests
 ```sh
 uv sync               # Install dependencies
 uv run pytest         # Run all tests
+```
+
+### Kotlin / JVM
+
+```sh
+./gradlew test        # Run all tests
+./gradlew publishToMavenLocal   # Publish to local Maven repo
 ```
 
 ## License

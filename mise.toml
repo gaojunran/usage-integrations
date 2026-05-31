@@ -1,2 +1,6 @@
+[tools]
+java = "temurin-21.0.11"
+gradle = "9.5.1"
+
 [tasks.test]
-run = "npx vitest run"  # FIXME: should use aube
+run = "npx vitest run"

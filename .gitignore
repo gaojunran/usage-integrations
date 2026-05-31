@@ -6,3 +6,21 @@ aube-lock.yaml
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Kotlin / Gradle
+build/
+.gradle/
+bin/
+*.iml
+.idea/
+*.class
+*.jar
+*.war
+*.ear
+.DS_Store
+.kotlin/
+
+# Eclipse
+.classpath
+.project
+.settings/
