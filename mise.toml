@@ -1,6 +1,7 @@
 [tools]
 java = "temurin-21.0.11"
 gradle = "9.5.1"
+go = "latest"
 
 [tasks.test]
 run = "npx vitest run"

@@ -33,6 +33,15 @@ Published to [GitHub Packages](https://github.com/gaojunran/usage-integrations/p
 | [`picocli-usage`](packages/picocli-usage/) | `dev.usage-spec:picocli-usage` | picocli integration |
 | [`clikt-usage`](packages/clikt-usage/) | `dev.usage-spec:clikt-usage` | Clikt integration |
 
+### Go
+
+| Package | Go module | Description |
+|---|---|---|
+| [`usage-spec-go`](packages/usage-spec-go/) | `github.com/gaojunran/usage-integrations/packages/usage-spec-go` | Core Spec types, KDL/JSON rendering via `calico32/kdl-go` |
+| [`cobra-usage`](packages/cobra-usage/) | `github.com/gaojunran/usage-integrations/packages/cobra-usage` | Cobra integration |
+| [`kong-usage`](packages/kong-usage/) | `github.com/gaojunran/usage-integrations/packages/kong-usage` | Kong integration |
+| [`urfavecli-usage`](packages/urfavecli-usage/) | `github.com/gaojunran/usage-integrations/packages/urfavecli-usage` | urfave/cli v2 integration |
+
 ## Usage
 
 ### JavaScript / TypeScript
@@ -124,6 +133,25 @@ val json = generateJSON(command)
 val spec = convertRoot(command)
 ```
 
+### Go
+
+Each adapter package provides the same API surface:
+
+```go
+import (
+    cobrausage "github.com/gaojunran/usage-integrations/packages/cobra-usage"
+)
+
+// Generate KDL spec
+kdl := cobrausage.GenerateKDL(cmd)
+
+// Generate JSON spec
+json := cobrausage.GenerateJSON(cmd)
+
+// Get Spec object for custom processing
+spec := cobrausage.ConvertRoot(cmd)
+```
+
 Pipe KDL output to the `usage` CLI for completions, docs, and man pages:
 
 ```sh
@@ -152,6 +180,15 @@ uv run pytest         # Run all tests
 ```sh
 ./gradlew test        # Run all tests
 ./gradlew publishToMavenLocal   # Publish to local Maven repo
+```
+
+### Go
+
+```sh
+cd packages/usage-spec-go && go test ./...
+cd packages/cobra-usage && go test ./...
+cd packages/kong-usage && go test ./...
+cd packages/urfavecli-usage && go test ./...
 ```
 
 ## License
