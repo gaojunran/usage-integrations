@@ -2,10 +2,8 @@ module github.com/gaojunran/usage-integrations/packages/cobra-usage
 
 go 1.26.4
 
-replace github.com/gaojunran/usage-integrations/packages/usage-spec-go => ../usage-spec-go
-
 require (
-	github.com/gaojunran/usage-integrations/packages/usage-spec-go v0.0.0-00010101000000-000000000000
+	github.com/gaojunran/usage-integrations/packages/usage-spec-go v0.1.0
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
 	github.com/stretchr/testify v1.11.1
