@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "usage-spec-argparse"
-version = "1.1.0"
+version = "1.2.0"
 description = "Generates usage spec for CLIs written with argparse"
 requires-python = ">=3.10"
 license = "MIT"
