@@ -19,6 +19,7 @@ bin/
 *.ear
 .DS_Store
 .kotlin/
+.slim/
 
 # Eclipse
 .classpath
