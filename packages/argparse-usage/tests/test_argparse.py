@@ -232,7 +232,7 @@ class TestPositionalArguments:
 
         output = generate(p)
 
-        assert "arg [name]" in output
+        assert 'arg "[name]"' in output
         assert "required=#false" in output
 
     def test_converts_variadic_arguments(self):
@@ -252,7 +252,7 @@ class TestPositionalArguments:
         output = generate(p)
 
         assert "arg <source>" in output
-        assert "arg [dest]" in output
+        assert 'arg "[dest]"' in output
 
 
 class TestChoices:
@@ -388,7 +388,7 @@ class TestDefaultValues:
 
         output = generate(p)
 
-        assert "default=0" in output
+        assert 'default="0"' in output
 
 
 class TestCountFlags:

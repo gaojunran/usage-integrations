@@ -17,7 +17,7 @@ def test_simple_spec():
     output = render_kdl(spec)
     assert "name mycli" in output
     assert "bin mycli" in output
-    assert "version 1.0.0" in output
+    assert 'version "1.0.0"' in output
     assert 'about "A simple CLI"' in output
     assert 'flag "-v --verbose"' in output
     assert 'help="Enable verbose output"' in output
@@ -60,7 +60,7 @@ def test_default_values():
     )
     output = render_kdl(spec)
     assert "default=json" in output
-    assert "default=3" in output
+    assert 'default="3"' in output
 
 
 def test_boolean_default_true():
@@ -125,7 +125,7 @@ def test_positional_args():
     )
     output = render_kdl(spec)
     assert "arg <file>" in output
-    assert "arg [output]" in output
+    assert 'arg "[output]"' in output
     assert "required=#false" in output
 
 
@@ -258,4 +258,4 @@ def test_string_zero_default():
         ],
     )
     output = render_kdl(spec)
-    assert "default=0" in output
+    assert 'default="0"' in output

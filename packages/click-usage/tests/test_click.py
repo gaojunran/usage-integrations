@@ -178,7 +178,7 @@ class TestOptions:
             pass
 
         output = generate(cli)
-        assert "default=0" in output
+        assert 'default="0"' in output
 
     def test_renders_boolean_default_true(self):
         @click.command()
@@ -360,7 +360,7 @@ class TestPositionalArguments:
             pass
 
         output = generate(cli)
-        assert "arg [name]" in output
+        assert 'arg "[name]"' in output
 
     def test_converts_variadic_arguments(self):
         @click.command()
@@ -807,7 +807,7 @@ class TestFullOutputFormat:
 
         assert "name example" in output
         assert "bin example" in output
-        assert "version 1.0.0" in output
+        assert 'version "1.0.0"' in output
         assert 'about "An example CLI"' in output
         assert 'flag "-f --file"' in output
         assert "flag --verbose" in output

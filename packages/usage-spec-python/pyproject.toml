@@ -21,6 +21,8 @@ classifiers = [
     "Topic :: Utilities",
 ]
 
+dependencies = ["ckdl>=0.6"]
+
 [project.urls]
 Repository = "https://github.com/gaojunran/usage-integrations"
 
