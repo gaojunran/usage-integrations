@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10"
 
 [manifest]
@@ -111,7 +111,7 @@ name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://mirrors.aliyun.com/pypi/simple/" }
 dependencies = [
-    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://mirrors.aliyun.com/pypi/packages/50/79/66800aadf48771f6b62f7eb014e352e5d06856655206165d775e675a02c9/exceptiongroup-1.3.1.tar.gz", hash = "sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219" }
 wheels = [
@@ -271,17 +271,17 @@ wheels = [
 
 [[package]]
 name = "typer"
-version = "0.25.1"
+version = "0.27.1"
 source = { registry = "https://mirrors.aliyun.com/pypi/simple/" }
 dependencies = [
     { name = "annotated-doc" },
-    { name = "click" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "rich" },
     { name = "shellingham" },
 ]
-sdist = { url = "https://mirrors.aliyun.com/pypi/packages/e4/51/9aed62104cea109b820bbd6c14245af756112017d309da813ef107d42e7e/typer-0.25.1.tar.gz", hash = "sha256:9616eb8853a09ffeabab1698952f33c6f29ffdbceb4eaeecf571880e8d7664cc" }
+sdist = { url = "https://mirrors.aliyun.com/pypi/packages/ae/40/4a3db7990d1f62a53182aa96eaef57aeb2886a27f90a195bc66713565d31/typer-0.27.1.tar.gz", hash = "sha256:a79bef8469a79c45498e7b814ecf8d603cc7644e9acbd9e19cac0334240b18df" }
 wheels = [
-    { url = "https://mirrors.aliyun.com/pypi/packages/3f/f9/2b3ff4e56e5fa7debfaf9eb135d0da96f3e9a1d5b27222223c7296336e5f/typer-0.25.1-py3-none-any.whl", hash = "sha256:75caa44ed46a03fb2dab8808753ffacdbfea88495e74c85a28c5eefcf5f39c89" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/43/89/9518bc0c3929bee36b3a4a8e3daddd6e03f92f9961c66d4983b837160543/typer-0.27.1-py3-none-any.whl", hash = "sha256:53150287edd11baeb4e4722c8e394fcdf8181c0ae89485cba8d25c778d5edd56" },
 ]
 
 [[package]]
@@ -325,7 +325,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "usage-spec"
-version = "1.1.0"
+version = "1.2.0"
 source = { editable = "packages/usage-spec-python" }
 dependencies = [
     { name = "ckdl" },
@@ -345,7 +345,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "usage-spec-argparse"
-version = "1.1.0"
+version = "1.2.0"
 source = { editable = "packages/argparse-usage" }
 dependencies = [
     { name = "usage-spec" },
@@ -365,7 +365,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "usage-spec-click"
-version = "1.1.0"
+version = "1.2.1"
 source = { editable = "packages/click-usage" }
 dependencies = [
     { name = "click" },
@@ -389,7 +389,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "usage-spec-typer"
-version = "1.1.0"
+version = "1.2.1"
 source = { editable = "packages/typer-usage" }
 dependencies = [
     { name = "typer" },
