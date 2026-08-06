@@ -67,7 +67,11 @@ def _convert_flag(opt: click.Option) -> SpecFlag:
         count=opt.count,
         var=opt.multiple,
         negate=negate,
-        deprecated=str(opt.deprecated) if isinstance(opt.deprecated, str) else "",
+        deprecated=(
+            str(opt.deprecated)
+            if isinstance(getattr(opt, "deprecated", None), str)
+            else ""
+        ),
         default=[],
         default_bool=None,
         env=str(opt.envvar) if isinstance(opt.envvar, str) else (opt.envvar[0] if opt.envvar and isinstance(opt.envvar, (list, tuple)) else ""),
